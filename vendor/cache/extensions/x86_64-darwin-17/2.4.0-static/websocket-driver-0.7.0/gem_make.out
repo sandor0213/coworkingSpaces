@@ -1,0 +1,15 @@
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/websocket-driver-0.7.0/ext/websocket-driver
+/Users/alexanderbalogh/.rbenv/versions/2.4.4/bin/ruby -r ./siteconf20190319-53927-e4s69r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20190319-53927-13ygd7a
