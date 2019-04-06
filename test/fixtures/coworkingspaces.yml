@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  price: 1.5
+  area: 1.5
+  description: MyString
+  is_booked: false
+  address: MyString
+  city: MyString
+  beginDate: 2019-04-06 18:20:28
+  finishDate: 2019-04-06 18:20:28
+  has_kitchen: false
+  has_meetroom: false
+  has_free_wifi: false
+  has_free_cookies: false
+  people_number: 1
+
+two:
+  user_id: 1
+  price: 1.5
+  area: 1.5
+  description: MyString
+  is_booked: false
+  address: MyString
+  city: MyString
+  beginDate: 2019-04-06 18:20:28
+  finishDate: 2019-04-06 18:20:28
+  has_kitchen: false
+  has_meetroom: false
+  has_free_wifi: false
+  has_free_cookies: false
+  people_number: 1
