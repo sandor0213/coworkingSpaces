@@ -1,0 +1,2 @@
+class CoworkingfiltersController < ApplicationController
+end
