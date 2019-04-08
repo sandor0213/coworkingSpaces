@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_105206) do
+ActiveRecord::Schema.define(version: 2019_04_06_152028) do
+
+  create_table "coworkingspaces", force: :cascade do |t|
+    t.integer "user_id"
+    t.float "price"
+    t.float "area"
+    t.string "description"
+    t.boolean "is_booked"
+    t.string "address"
+    t.string "city"
+    t.datetime "beginDate"
+    t.datetime "finishDate"
+    t.boolean "has_kitchen"
+    t.boolean "has_meetroom"
+    t.boolean "has_free_wifi"
+    t.boolean "has_free_cookies"
+    t.integer "people_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

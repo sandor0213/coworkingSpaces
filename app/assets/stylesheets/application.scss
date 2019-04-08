@@ -11,5 +11,42 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+  require jquery3
+ require popper
+ require bootstrap
  *= require_self
  */
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.body{
+	font-family: 'Cabin', sans-serif;
+}
+
+.navbar {
+	background-color: #fd9800 !important;
+	color: #262b40;
+	font-family: 'Cabin', sans-serif;
+}
+
+.navbar-brand{
+	
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	
+	width:100px;
+	height: 40px;
+}
+#image_logo{
+	margin-top: -40px;
+	margin-bottom: 0;
+	width:100px;
+	height: 40px;
+}
+
+.fas{
+	/*font-family: 'Cabin', sans-serif;*/
+	color: #262b40;
+}
