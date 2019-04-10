@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
    <a class="navbar-brand" href="/">
     <img id="image_logo" src="https://document-export.canva.com/DADWeW4HV6Q/66/thumbnail/0001-1689881075.png" alt="Logo" style="width:100px; height: 80px;">
    </a>
     <ul class="navbar-nav ml-auto">
 <% if !user_signed_in? %>
-      <%= link_to user_session_path, class: "nav-link" do %>
+      <%= link_to user_session_path, class: "nav-link" do  %>
         <i class="fas fa-sign-in-alt"> Login</i> 
       <% end %>
 <% else %>
@@ -13,4 +14,5 @@
       <% end %>
 <% end %>
     </ul>
+    </div>
 </nav>

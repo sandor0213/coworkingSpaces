@@ -29,6 +29,7 @@
 	background-color: #fd9800 !important;
 	color: #262b40;
 	font-family: 'Cabin', sans-serif;
+	height: 76px;
 }
 
 .navbar-brand{
@@ -116,8 +117,8 @@
 }
 
 .checkbox{
-	display: inline-block;
-	position: absolute;
+	display: none;
+	
 
 }
 
@@ -134,9 +135,10 @@
 	margin-right: 7px;
 	margin-bottom: 3px;
 	position: relative;
+	cursor: pointer;
 }
 
-.checkbox-fake:after{
+.checkbox-fake::after{
 	border-radius: 8px;
 	left: 50%;
 	top: 50%;
@@ -149,9 +151,10 @@
 	width: 0px;
 	height: 0px;
 	background-color: #fd9800;
-
+    cursor: pointer;
 }
-.checkbox:checked + .checkbox-fake:after{
+
+.checkbox:checked + .checkbox-fake::after{
 	
 	width: 11px;
 	height: 11px;
@@ -164,6 +167,18 @@ a{
 }
 a:hover{
 	color: #262b40;
-	text-decoration: none;
-	
+	text-decoration: none;	
+}
+
+.footer{
+	background-color: #fd9800 !important;
+	color: #262b40;
+	font-family: 'Cabin', sans-serif;
+	height: 76px;
+}
+
+@include media-breakpoint-between(md, xl) {
+   .navbar-brand, .navbar-nav{
+    display: block;
+  }
 }
