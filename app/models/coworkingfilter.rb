@@ -1,0 +1,2 @@
+class Coworkingfilter < ApplicationRecord
+end
