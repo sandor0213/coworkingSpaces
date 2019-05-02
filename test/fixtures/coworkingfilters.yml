@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  beginDate: 2019-05-01
+  finishDate: 2019-05-01
+
+two:
+  city: MyString
+  beginDate: 2019-05-01
+  finishDate: 2019-05-01
