@@ -9,7 +9,7 @@
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password",  placeholder: " ********" %>
   </div>
 
   <% if devise_mapping.rememberable? %>

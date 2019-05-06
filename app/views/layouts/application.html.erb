@@ -5,14 +5,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true  %>
   </head>
 
-  <body>
-    <%= render "layouts/header"%>
+  <body style="background: linear-gradient(#fd9800  0%, #fff 100%) no-repeat 50% 50% / 100% 100%;width: 100%;">
 
-    <%= yield %>
+    <%= render "layouts/header"%>
+    
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    
   </body>
 
 </html>
