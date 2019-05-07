@@ -1,0 +1,228 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+  require jquery3
+ require popper
+ require bootstrap
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+.body{
+	
+	font-family: 'Cabin', sans-serif;
+	color: #2e435e;
+	
+}
+
+
+
+.navbar {
+	background-color: #fd9800 !important;
+	color: #2e435e;
+	font-family: 'Cabin', sans-serif;
+	height: 76px;
+}
+
+.navbar-brand{
+	
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	
+	width:100px;
+	height: 40px;
+}
+#image_logo{
+	margin-top: -40px;
+	margin-bottom: 0;
+	width:100px;
+	height: 40px;
+}
+
+.fas{
+	/*font-family: 'Cabin', sans-serif;*/
+	color:#2e435e;
+}
+
+
+
+/* User sign in and sign forms. */
+.border-form-div {
+	font-family: 'Merriweather', serif;
+	color: #262b40;
+  max-width: 320px;
+  padding: 25px 30px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff9e5;
+  border: 1px solid #fd9800;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+  width:250px;
+}
+
+#user_email{
+	border: 1px solid #fd9800;
+	border-radius: 14px; 
+	outline:0px !important;
+	
+}
+
+#user_password{
+	border: 1px solid #fd9800;
+	border-radius: 14px; 
+	outline:0px !important;
+}
+.field_{
+  border: 1px solid #fd9800;
+	border-radius: 14px; 
+	outline:0px !important;
+	transition: all 0.2s ease-in;
+}
+
+.subm{
+	border: 1px solid #fd9800;
+	background-color: #fd9800;
+	border-radius: 11px;
+	outline:0px !important;
+}
+.subm:hover{
+	background-image:linear-gradient(to top, #fd9800 0%,#fdb100);
+	border: 1px solid #fdb100;
+	
+}
+
+.checkbox{
+	display: none;
+	
+
+}
+
+.checkbox-fake{
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	box-shadow: 2px 2px 0 rgba(14, 15, 33, 0.07);
+	border: 2px solid rgba(194, 194, 194, 0.4);
+	background-color: #ffffff;
+	border-radius: 20px;
+	margin-left: 10px;
+	margin-right: 7px;
+	margin-bottom: 3px;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox-fake::after{
+	border-radius: 8px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.2s ease-in;
+	-webkit-transition:0.2s ease-in;
+	position: absolute;
+	content: "";
+	display: block;
+	width: 0px;
+	height: 0px;
+	background-color: #fd9800;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.checkbox:checked + .checkbox-fake::after{
+	
+	width: 11px;
+	height: 11px;
+
+}
+
+a{
+	padding-left: 8px;
+	color:#fd9800;
+}
+a:hover{
+	color: #2e435e;
+	text-decoration: none;	
+	transition: all 0.2s ease-in;
+}
+
+.footer{
+	background-color: #fff9e5 !important;
+	color: #2e435e;
+	font-family: 'Cabin', sans-serif;
+	position: fixed;
+    padding:30px;
+    bottom: 0;
+    min-width: 1320px;
+    margin: 0 auto; 
+  
+}
+
+.footer-navigation-list{
+	color: #2e435e;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 30.42px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+	
+	justify-content: flex-end;
+
+}
+
+.footer-navigation-list li{
+    
+    margin-left: 33px;
+}
+
+.footer-navigation-list li:last-child{
+	margin-right: 0;
+}
+
+.footer-navigation-list a{
+	color: #2e435e;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.footer-navigation-list a:hover{
+	color: #fd9800;
+
+    text-decoration: none;
+    cursor: pointer;
+}
