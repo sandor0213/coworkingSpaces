@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_152028) do
+
+  create_table "coworkingfilters", force: :cascade do |t|
+    t.string "city"
+    t.date "beginDate"
+    t.date "finishDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 
   create_table "coworkingspaces", force: :cascade do |t|
     t.integer "user_id"
