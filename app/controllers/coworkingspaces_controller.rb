@@ -1,5 +1,10 @@
 class CoworkingspacesController < ApplicationController
 before_action :authenticate_user!
+before_action :find_space, only: [:show]
+    
+def index
+    @coworkingspaces = Coworkingspace.all
+end
 
 def new
 	@coworkingspace = Coworkingspace.new
@@ -46,6 +51,9 @@ def filtered_spaces
 	end	
 		end
 	end
+
+def show 
+end		
 
 
 private def coworkingspacesparams
