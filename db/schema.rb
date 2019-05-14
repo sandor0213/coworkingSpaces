@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_193223) do
 
   create_table "coworkingfilters", force: :cascade do |t|
     t.string "city"
@@ -19,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_193223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 
   create_table "coworkingspaces", force: :cascade do |t|
     t.integer "user_id"
