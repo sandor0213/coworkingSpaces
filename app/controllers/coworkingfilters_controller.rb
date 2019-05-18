@@ -13,9 +13,10 @@ def create
 
 
 end
-private def coworkingfilterparams
+private
+ def coworkingfilterparams
 	params.require(:coworkingfilter).permit(:city, :beginDate, :finishDate)
 	end
 
 end
-end
+

@@ -4,19 +4,30 @@
    <a class="navbar-brand" href="/">
     <img id="image_logo" src="https://document-export.canva.com/DADWeW4HV6Q/67/thumbnail/0001-1690195282.png" alt="Logo" style="width:100px; height: 80px;">
    </a>
-      
+    
 
     <ul class="navbar-nav ml-auto">
-<% if !user_signed_in? %>
-      <%= link_to user_session_path, class: "nav-link" do  %>
+       
+<% if user_signed_in? %>
+      
+         <ul class="dropdown">
+       <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown 
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"><%= link_to "Find coworking space", new_coworkingfilter_path %></a>
+        <a class="dropdown-item" href="#"><%= link_to "Suggest coworking space", new_coworkingspace_path %></a>
+        <a class="dropdown-item" href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
+      </div>
+    </li>
+    </ul>
+<% else %>
+    <%= link_to user_session_path, class: "nav-link" do  %>
         <i class="fas fa-sign-in-alt"> Login</i> 
       <% end %>
-<% else %>
-      <%= link_to destroy_user_session_path, class: "nav-link", method: :delete do %>
-        <i class="fas fa-sign-out-alt"> Logout</i> 
-      <% end %>
-<% end %>
-    </ul>
+
+    <% end %>
     </div>
   </div>
 </nav>
