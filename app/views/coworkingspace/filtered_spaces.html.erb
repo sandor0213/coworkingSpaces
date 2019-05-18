@@ -1,0 +1,22 @@
+<% if @coworkingspaces == [] %>
+  <p> Based on your parameters no coworking spaces was found. Please change your parameters for search. </p><br>
+<% else %>
+  <% @coworkingspaces.each do |space| %>
+<p>City: <%= space.city %><br>
+Address: <%= space.address %><br>
+Area in m²: <%= space.area %><br>
+Description: <%= space.description %><br>
+Price per a person (per a day) in $: <%= space.price %><br>
+How many persons: <%= space.peopleNumber %><br>
+Do you have:<br>
+Kitchen  <%= check_box_tag 'Kitchen', 'accepted', space.hasKitchen, disabled: true %><br>
+Meetroom  <%= check_box_tag 'Meetroom', 'accepted', space.hasMeetroom, disabled: true %><br>
+free WiFi  <%= check_box_tag "WiFi", 'accepted', space.hasFreeWiFi, disabled: true %><br>
+free coffee, tea, and cookies? <%= check_box_tag "Cookies", 'accepted', space.hasFreeCookies, disabled: true %><br>
+Photo: <%= image_tag(space.image_url, size: "100x100")%></p><br>
+<% if space.isbooked %>
+The coworking space is booked!
+<% end %>
+<%= link_to "Read more", coworkingspace_path(space.id) %><br></p>
+<% end %>
+<% end %>
