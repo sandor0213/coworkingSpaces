@@ -1,0 +1,2 @@
+module SuggestionspacesHelper
+end
