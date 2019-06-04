@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coworkingspace_id: 1
+  peopleNumber: 1
+  beginDate: 2019-06-04
+  finishDate: 2019-06-04
+  user_id: 1
+
+two:
+  coworkingspace_id: 1
+  peopleNumber: 1
+  beginDate: 2019-06-04
+  finishDate: 2019-06-04
+  user_id: 1
