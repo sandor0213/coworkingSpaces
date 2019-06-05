@@ -10,13 +10,16 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./path/to/dropzone.js"></script>
   </head>
+
 
   <body style="background: linear-gradient(#fd9800  0%, #fff 100%) no-repeat 50% 50% / 100% 100%; height: 100%;">
 
     <%= render "layouts/header"%>
     
       <%= yield %>
+      <div id ="create"></div>
       <%= render 'layouts/footer' %>
     
   </body>

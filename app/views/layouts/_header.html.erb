@@ -16,7 +16,7 @@
         Dropdown 
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#"><%= link_to "Find coworking space", new_coworkingfilter_path %></a>
+        <a class="dropdown-item" href="#"><%= link_to "Find coworking space", new_coworkingfilter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a>
         <a class="dropdown-item" href="#"><%= link_to "Suggest coworking space", new_coworkingspace_path %></a>
         <a class="dropdown-item" href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
       </div>
@@ -28,6 +28,6 @@
       <% end %>
 
     <% end %>
+     </ul>
     </div>
-  </div>
 </nav>
