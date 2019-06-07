@@ -1,0 +1,20 @@
+<% if @userparam.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@userparam.errors.count, "error") %> </h2>
+  
+     <ul>
+     <% @userparam.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+<%= form_for @userparam, url: userparams_path do |f| %>
+  Firsname: <%= f.text_field :firstname %><br />
+  Lastname: <%= f.text_field :lastname %><br />
+  Age: <%= f.text_field :age %><br />
+  Hometown: <%= f.text_field :hometown %><br />
+  Occupation: <%= f.text_field :occupation %><br />
+  Avatar: <%= f.file_field :avatar %> <br> <br></p>
+  <%= f.submit "Create" %>
+<% end %>
