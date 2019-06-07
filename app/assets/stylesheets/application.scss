@@ -22,10 +22,18 @@
 @import "font-awesome";
 @import "header";
 @import "coworkingfilters";
-.body{
+
+html {
+    position: relative;
+    min-height: 100%;
+       
+}
+
+body{
 	
 	font-family: 'Cabin', sans-serif;
 	color: #2e435e;
+	margin-bottom: 60px;
 	
 }
 
@@ -38,7 +46,7 @@
     bottom: 0;
     min-width: 1320px;
     margin: 0 auto; 
-  
+  	height: 80px;
 }
 
 .footer-navigation-list{
