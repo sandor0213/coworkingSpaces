@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_091742) do
+
+ActiveRecord::Schema.define(version: 2019_06_07_080531) do
+
 
   create_table "coworkingfilters", force: :cascade do |t|
     t.string "city"
@@ -66,6 +68,12 @@ ActiveRecord::Schema.define(version: 2019_06_05_091742) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+
   end
 
   create_table "users", force: :cascade do |t|
