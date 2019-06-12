@@ -13,4 +13,4 @@ free WiFi  <%= check_box_tag "WiFi", 'accepted', @orderspace.coworkingspace.hasF
 free coffee, tea, and cookies? <%= check_box_tag "Cookies", 'accepted', @orderspace.coworkingspace.hasFreeCookies, disabled: true %><br>
 Photo: <%= image_tag(@orderspace.coworkingspace.image_url, size: "100x100")%></p>
 <%= link_to "Edit booking", edit_orderspace_path(@orderspace.id) %>
-<%= link_to "Delete booking", orderspace_path(@orderspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space"} %>
+<%= link_to "Delete booking", orderspace_path(@orderspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space?"} %>

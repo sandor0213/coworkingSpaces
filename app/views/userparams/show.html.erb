@@ -1,7 +1,21 @@
-  Firsname: <%= @userparam.firstname %><br />
-  Lastname: <%= @userparam.lastname %><br />
-  Age: <%= @userparam.age %><br />
-  Hometown: <%= @userparam.hometown %><br />
-  Occupation: <%= @userparam.occupation %><br />
-  <%= image_tag @userparam.avatar.url(:small) %></p>
-  <%= link_to "Edit profile", edit_userparam_path(@userparam.id) %>
+<div class="container-fluid">
+	<div class="profile">
+		<div class="row">
+			
+			<div class="col-4">
+			 <%= image_tag @userparam.avatar.url, size: "300x300" %>
+			</div>
+			<div class="col-8">
+				<div class="user-info">
+					<h3>User Information</h3>
+ 		 <p>Firsname: <i> <%= @userparam.firstname %></i><br /> </p> 
+  		 <p>Lastname: <i><%= @userparam.lastname %></i><br /></p> 
+  		 <p>Age: <i><%= @userparam.age %></i><br /></p> 
+  	 	 <p>Hometown: <i><%= @userparam.hometown %></i><br /></p> 
+ 		 <p>Occupation: <i><%= @userparam.occupation %></i><br /></p> 
+                </div>
+  	<%= link_to "Edit profile", edit_userparam_path(@userparam.id) %>
+  			</div>
+  		</div>
+  	</div>
+ </div>
