@@ -1,3 +1,21 @@
 // Place all the styles related to the Coworkingfilters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.close{
+	background-color: #fd9800 !important;
+	height: 15px;
+	padding-bottom: 15px;
+	line-height: 0;
+	color: #000000 !important;
+}
+.modal-content{
+	margin-top: 150px;
+}
+ .modal-header{
+ 	height: 15px;
+ }
+
+.form_for{
+	color: #fd9800 !important;
+}	
