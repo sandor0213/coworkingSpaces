@@ -1,3 +1,5 @@
+<div class="border-form">
+  <div class="container-fluid">
 <% if @userparam.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@userparam.errors.count, "error") %> </h2>
@@ -10,11 +12,39 @@
    </div>
  <% end %>
 <%= form_for @userparam, url: userparams_path do |f| %>
-  Firsname: <%= f.text_field :firstname %><br />
-  Lastname: <%= f.text_field :lastname %><br />
-  Age: <%= f.text_field :age %><br />
-  Hometown: <%= f.text_field :hometown %><br />
-  Occupation: <%= f.text_field :occupation %><br />
-  Avatar: <%= f.file_field :avatar %> <br> <br></p>
-  <%= f.submit "Create" %>
-<% end %>
+<h2>Your Profile Info</h2>
+<center>
+  <div class="field">  
+   <%= f.text_field :firstname, class: "field_", placeholder: " Firstname" %><br />
+  </div>
+
+  <div class="field">
+   <%= f.text_field :lastname, class: "field_", placeholder: "Lastname" %><br />
+   </div>
+
+  <div class="field">
+    <%= f.text_field :age, class: "field_", placeholder: "Age" %><br />
+  </div>
+
+  <div class="field">
+    <%= f.text_field :hometown, class: "field_" , placeholder: " Hometown"%><br />
+  </div>
+
+  <div class="field">
+    <%= f.text_field :occupation, class: "field_", placeholder: "Occupation" %><br />
+  </div>
+
+  <div class="field">
+    <%= f.file_field :avatar%> <br />
+  </div>
+
+
+   <div class="actions">
+    
+  <%= f.submit "Create", class: "subm" %>
+
+  </div>
+</center>
+  <% end %>
+</div>
+</div>
