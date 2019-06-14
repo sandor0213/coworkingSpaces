@@ -1,18 +1,19 @@
-<% if @orderspaces == [] || @orderspaces == nil %>
-You have no bookings yet
-<% else %>
-<% @orderspaces.each do |order| %>
-<% if current_user.id == order.user_id %>
-City <%= order.coworkingspace.city %><br>
-Address <%= order.coworkingspace.address %><br>
-How many persons do I need the coworking space for: <%= order.peopleNumber %><br>
-Total sum: <%= order.peopleNumber * order.coworkingspace.price * (order.finishDate - order.
+<div class="container-fluid">
+	<% if @orderspaces == [] || @orderspaces == nil %>
+		<h2>You have no bookings yet</h2>
+	<% else %>
+	  <% @orderspaces.each do |order| %>
+		<% if current_user.id == order.user_id %>
+		City <%= order.coworkingspace.city %><br>
+		Address <%= order.coworkingspace.address %><br>
+		How many persons do I need the coworking space for: <%= order.peopleNumber %><br>
+		Total sum: <%= order.peopleNumber * order.coworkingspace.price * (order.finishDate - order.
 	beginDate + 1)%><br>
-<p>Begin date <%= order.beginDate %><br>
-Finish date <%= order.finishDate %></p><br>
-Photo: <%= image_tag(order.coworkingspace.image_url, size: "100x100")%></p>
-<%= link_to "Read more", orderspace_path(order.id) %><br>
-<hr>
-<% end %>
-<% end %>
-<% end %>
+	<p>Begin date <%= order.beginDate %><br>
+	Finish date <%= order.finishDate %></p><br>
+	Photo: <%= image_tag(order.coworkingspace.image_url, size: "100x100")%></p>
+	<%= link_to "Read more", orderspace_path(order.id) %><br>
+		<% end %>
+	  <% end %>
+	<% end %>
+</div>

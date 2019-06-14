@@ -149,6 +149,7 @@ a{
 	text-decoration:none;
 	text-align: center;
 	margin-left: 5px;
+
  }
 
 a:hover{
@@ -165,19 +166,30 @@ li.nav-item.dropdown{
 	font-weight: bold;
 	font-family: Norwester;
 	font-size: 20px;
+
 	
 }
 
 .dropdown-menu{
 	width: 200px;
-	margin-left: -76px;
+	position: static;
+	margin-left: -160px;
 	margin-top: -5px;
 	 background-color: #fff9e5;
   border: 1px solid #fd9800;
           border-radius: 5px;
           box-shadow: 0 3px 10px rgba(0,0,0,.05);
+
 }
 
+hr{
+     border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
 
+}
 
+.dropdown-item{
+	padding-bottom: 8px;
+}
 

@@ -14,17 +14,19 @@
          <ul class="navbar-nav">
        <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-target="dropdown-target" href="#" data-toggle="dropdown">
-       <%= image_tag @userparam.avatar.url(:small) %>
+       
         <span class= "caret"></span>
          </a>
       <div class="dropdown-menu" aria-labelledby="data-target">
         <% if current_user.userparam.nil? %>
-        <a class="dropdown-item" ><%= link_to "My Profile", new_userparam_path %></a> 
+        <a class="dropdown-item" ><%= link_to "My Profile", new_userparam_path %></a> <hr>
          <% else %>
-             <%= link_to "Profile", userparam_path(current_user.id) %>
+             <%= link_to "My Profile", userparam_path(current_user.id) %> <hr>
          <% end %>
-        <a class="dropdown-item"><%= link_to "Find coworking space", new_coworkingfilter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a>
-        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_coworkingspace_path %></a>
+        <a class="dropdown-item"><%= link_to "Find coworking space", new_coworkingfilter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
+        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_coworkingspace_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Orders", orderspaces_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Coworking Spaces", coworkingspaces_path %></a><hr>
         <a class="dropdown-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
       </div>
     </li>
