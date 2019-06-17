@@ -23,6 +23,7 @@
 @import "header";
 @import "coworkingfilters";
 @import "userparams";
+@import "pages";
 
 html {
     position: relative;
@@ -40,15 +41,14 @@ body{
 }
 
 .footer{
-	background: linear-gradient(#fff  0%, #ffd699 100%) no-repeat 50% 50% / 100% 100% !important;
+	background-color:   #ffebcc !important;
 	color: #2e435e;
 	font-family: 'Cabin', sans-serif;
-	
     padding:30px;
     bottom: 0;
   	height: 80px;
   	position: fixed;
-	margin-top: -80px;
+	
   margin: 0 auto;
    width: 100%;
 	
