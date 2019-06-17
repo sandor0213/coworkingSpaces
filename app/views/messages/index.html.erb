@@ -1,0 +1,32 @@
+
+<h1>Messages</h1>
+  	<% if @messages != [] && !@messages.nil? %>
+<table>
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>Message</th>
+      <th>To</th>
+      <th>Date</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+      	<%if message.from_user_id == current_user.id%>
+        <td><%=  User.find(message.from_user_id).email %></td>
+        <td><%= message.body%></td>
+         <td><%= User.find(message.to_user_id).email %></td>
+        <td><%= message.created_at.strftime("%F %T") %></td>
+        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td></br>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% end %>
+<% else %>
+You have no messages
+<% end %>
