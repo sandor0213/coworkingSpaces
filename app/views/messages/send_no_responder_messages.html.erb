@@ -1,0 +1,16 @@
+<% if @message.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@message.errors.count, "error") %> </h2>
+  
+     <ul>
+     <% @message.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+<%= form_for @message, url: messages_path(user_id: @user_id) do |f|%>
+<p><%= f.select(:to_user_id, Users.where('id', '!=', current_user.id).map{|u| ["#{u.id}", u.id]}.uniq, :prompt => 'Select a responder') %><br>
+Your message <%= f.text_field :body %><br>
+<%= f.submit "Create" %>
+<% end %>
