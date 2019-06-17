@@ -12,7 +12,7 @@
 	<p>Begin date <%= order.beginDate %><br>
 	Finish date <%= order.finishDate %></p><br>
 	Photo: <%= image_tag(order.coworkingspace.image_url, size: "100x100")%></p>
-	<%= link_to "Read more", orders_path(order.id) %><br>
+	<%= link_to "Read more", order_path(order.id) %><br>
 		<% end %>
 	  <% end %>
 	<% end %>

@@ -11,5 +11,6 @@ Meetroom  <%= check_box_tag 'Meetroom', 'accepted', @orderspace.coworkingspace.h
 free WiFi  <%= check_box_tag "WiFi", 'accepted', @orderspace.coworkingspace.has_free_wifi, disabled: true %><br>
 free coffee, tea, and cookies? <%= check_box_tag "Cookies", 'accepted', @orderspace.coworkingspace.has_free_cookies, disabled: true %><br>
 Photo: <%= image_tag(@orderspace.coworkingspace.image_url, size: "100x100")%></p>
+<p><%= link_to "Write message to owner", new_message_path(user_id: @orderspace.coworkingspace.user_id)%></p>
 <%= link_to "Edit booking", edit_order_path(@orderspace.id) %>
 <%= link_to "Delete booking", order_path(@orderspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space?"} %>
