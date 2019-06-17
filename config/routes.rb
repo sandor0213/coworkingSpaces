@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :coworkingfilters
   resources :coworkingspaces
   resources :userparams
+  resources :comments
   resources :orderspaces
   resources :suggestionspaces
   get "/coworkingspaces/filtered_spaces/:id", to: "coworkingspaces#filtered_spaces", as: :filtered_spaces
