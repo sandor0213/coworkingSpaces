@@ -23,10 +23,10 @@
          <% else %>
              <%= link_to "My Profile", userparam_path(current_user.id) %> <hr>
          <% end %>
-        <a class="dropdown-item"><%= link_to "Find coworking space", new_coworkingfilter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
-        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_coworkingspace_path %></a><hr>
-        <a class="dropdown-item" ><%= link_to "My Orders", orderspaces_path %></a><hr>
-        <a class="dropdown-item" ><%= link_to "My Coworking Spaces", coworkingspaces_path %></a><hr>
+        <a class="dropdown-item"><%= link_to "Find coworking space", new_filter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
+        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_space_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Orders", orders_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Coworking Spaces", spaces_path %></a><hr>
         <a class="dropdown-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
       </div>
     </li>
