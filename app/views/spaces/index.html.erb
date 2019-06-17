@@ -1,5 +1,6 @@
+<div class="container-fluid">
 <% if @coworkingspaces == [] || @coworkingspaces.nil? %>
-You have no coworking spaces yet
+<center><h2>You have no coworking spaces yet</h2></center>
 <% else %>
 <% @coworkingspaces.each do |space| %>
 <% if current_user.id == space.user_id %>
@@ -12,3 +13,4 @@ Photo: <%= image_tag(space.image_url, size: "100x100")%><br>
 <% end %>
 <% end %>
 <% end %>
+</div>
