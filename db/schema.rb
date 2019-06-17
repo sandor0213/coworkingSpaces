@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_080531) do
+
+ActiveRecord::Schema.define(version: 2019_06_17_142737) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "coworkingspace_id"
+    t.string "message"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "coworkingfilters", force: :cascade do |t|
     t.string "city"
@@ -35,6 +45,16 @@ ActiveRecord::Schema.define(version: 2019_06_07_080531) do
     t.boolean "has_free_wifi"
     t.boolean "has_free_cookies"
     t.integer "people_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "from_user_id"
+    t.integer "to_user_id"
+    t.string "body"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

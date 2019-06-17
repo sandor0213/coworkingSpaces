@@ -23,10 +23,10 @@ class Orderspace < ApplicationRecord
 			end
 		end
 	end
-	peopleAvailable = coworkingspace.peopleNumber - peopleTaken
+	peopleAvailable = coworkingspace.people_number - peopleTaken
 	
 	if peopleAvailable < peopleNumber
-		errors.add(:peopleNumber, "You cannot to book this cowoking place for #{peopleNumber} people. This space is available only for #{peopleAvailable} more people")
+		errors.add(:peopleNumber, "You cannot to book this cowoking place for #{people_number} people. This space is available only for #{peopleAvailable} more people")
 			throw(:abort)
 		else
 		end

@@ -49,6 +49,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem "paperclip", "~> 4.2"
+gem 'carrierwave', '~> 1.0'
 
 
 group :development, :test do

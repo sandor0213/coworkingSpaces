@@ -14,23 +14,37 @@
          <ul class="navbar-nav">
        <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-target="dropdown-target" href="#" data-toggle="dropdown">
-        Dropdown
+       
         <span class= "caret"></span>
          </a>
       <div class="dropdown-menu" aria-labelledby="data-target">
-        <a class="dropdown-item"><%= link_to "Find coworking space", new_coworkingfilter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a>
-        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_coworkingspace_path %></a>
-        <a class="dropdown-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
+        <% if current_user.userparam.nil? %>
+        <a class="dropdown-item" ><%= link_to t('profile'), new_userparam_path %></a> <hr>
+         <% else %>
+             <%= link_to t('profile'), userparam_path(current_user.id) %> <hr>
+         <% end %>
+        <a class="dropdown-item"><%= link_to "Find coworking space", new_filter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
+        <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_space_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Orders", orders_path %></a><hr>
+        <a class="dropdown-item" ><%= link_to "My Coworking Spaces", spaces_path %></a><hr>
+        <a class="dropdown-item"><%= link_to t('logout'), destroy_user_session_path, method: :delete %></a>
       </div>
     </li>
    
     </ul>
 <% else %>
     <%= link_to user_session_path, class: "nav-link" do  %>
-        <i class="fas fa-sign-in-alt"> Login</i> 
+        <i class="fas fa-sign-in-alt">  <%= t('login') %></i> 
       <% end %>
 
     <% end %>
      </ul>
+      <li class="nav-lang is-first text-sm-center">
+       <% if I18n.locale == :uk %>           
+         <%= link_to 'EN', {locale: :en}, {class: 'btn btn-main-ghost'} %>
+       <% else %>
+         <%= link_to 'UA', {locale: :uk}, {class: 'btn btn-main-ghost'} %>            
+       <% end %>
+     </li>
      </div>
 </nav>
