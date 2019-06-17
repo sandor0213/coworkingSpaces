@@ -13,6 +13,7 @@ def create
     @to_other_user_message.save
     if @message.save
     redirect_to messages_path	
+	end
 end
 
 def index
@@ -26,7 +27,8 @@ def destroy
 end	
 
 
-private def messageparams 
+private 
+	def messageparams 
 	params.require(:message).permit(:body, :user_id)
 	end
 end
