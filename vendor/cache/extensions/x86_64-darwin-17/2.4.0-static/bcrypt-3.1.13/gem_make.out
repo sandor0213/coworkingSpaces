@@ -1,0 +1,19 @@
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/bcrypt-3.1.13/ext/mri
+/Users/alexanderbalogh/.rbenv/versions/2.4.4/bin/ruby -r ./siteconf20190616-17721-xnquaq.rb extconf.rb
+creating Makefile
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" clean
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+clang  -D__SKIP_GNU -I/Users/alexanderbalogh/.rbenv/versions/2.4.4/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+current directory: /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 bcrypt_ext.bundle ./.gem.20190616-17721-1yssk34
