@@ -27,9 +27,17 @@
 	font-size: 20px;
 }
 
+li{
+	list-style-type: none;
+	
+}
+.nav-lang{
+	color:#ffffff;
+}
 
-
-
+.nav-lang:hover{
+	color:#2e435e;
+}
 /* User sign in and sign forms. */
 .border-form-div {
 	font-family: 'Merriweather', serif;
