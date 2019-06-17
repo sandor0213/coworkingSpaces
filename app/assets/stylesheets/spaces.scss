@@ -1,3 +1,52 @@
 // Place all the styles related to the Spaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+input, button, select, optgroup, textarea{
+	    border: 1px solid #fd9800;
+    border-radius: 14px;
+    outline: 0px !important;
+}
+.border-form1{
+  font-family: 'Merriweather', serif;
+	color: #262b40;
+  width: auto;
+  padding: 25px 30px 29px;
+  margin: 0 auto 20px;
+
+  background-color: #fff9e5;
+  border: 1px solid #fd9800;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.choise{
+margin-left: 190px;
+}
+.field_for_decs{
+	height: 150px;
+	width: 500px;
+	margin-left: -110px;
+}
+
+.number_field{
+	width: 40px;
+	text-align: center;
+	font-size: 19px;
+	vertical-align: middle;
+	
+	
+}
+
+input, button, select, optgroup, textarea{
+	text-align: center;
+	
+}
+
+.image{
+	margin-bottom: 20px;
+}

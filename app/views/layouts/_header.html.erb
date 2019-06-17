@@ -14,7 +14,7 @@
          <ul class="navbar-nav">
        <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-target="dropdown-target" href="#" data-toggle="dropdown">
-       
+       Menu
         <span class= "caret"></span>
          </a>
       <div class="dropdown-menu" aria-labelledby="data-target">
@@ -26,6 +26,7 @@
         <a class="dropdown-item"><%= link_to "Find coworking space", new_filter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
         <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_space_path %></a><hr>
         <a class="dropdown-item" ><%= link_to "My Orders", orders_path %></a><hr>
+         <a class="dropdown-item" ><%= link_to "My Messages", message_path(current_user.id) %></a><hr>
         <a class="dropdown-item" ><%= link_to "My Coworking Spaces", spaces_path %></a><hr>
         <a class="dropdown-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
       </div>
