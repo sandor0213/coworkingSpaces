@@ -10,10 +10,10 @@ def new
 		@comment = @coworkingspace.comments.build(commentparams)
 		@comment.user_id = current_user.id
 		if @comment.save
-			flash[:notice] = "Your comment was successfully created"
+			flash[:notice] = t('succeded')
 		redirect_to space_path(@coworkingspace.id)
 		else 
-			flash[:error] = "Your comment failed"
+			flash[:error] = t('failed')
 		render 'new'
 		end	
 	end	
