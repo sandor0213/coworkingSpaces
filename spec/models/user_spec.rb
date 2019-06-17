@@ -11,4 +11,25 @@ RSpec.describe User, type: :model do
     end
   end
 
+   describe "associations" do
+    it { should have_one(:userparam).dependent(:destroy) }
+  end
+
+  describe "associations1" do
+    it { should have_many(:coworkingspaces) }
+  end
+
+    describe "associations2" do
+    it { should have_many(:orderspaces) }
+  end
+
+    describe "associations3" do
+    it { should have_many(:comments) }
+  end
+
+    describe "associations4" do
+    it { should have_many(:messages) }
+  end
+
+
 end
