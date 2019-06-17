@@ -9,8 +9,8 @@
      </ul>
    </div>
  <% end %>
-<%= form_for @message, url: messages_path(user_id: @user_id) do |f|%>
-<p><%= f.select(:to_user_id, Users.where('id', '!=', current_user.id).map{|u| ["#{u.id}", u.id]}.uniq, :prompt => 'Select a responder') %><br>
+<%= form_for @message, url: post_no_responder_messages_path do |f|%>
+<p><%= f.select(:to_user_id, User.where.not(id: current_user.id).map{|u| ["#{u.email}", u.id]}.uniq, :prompt => 'Select a responder') %><br>
 Your message <%= f.text_field :body %><br>
 <%= f.submit "Create" %>
 <% end %>
