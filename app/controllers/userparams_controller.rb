@@ -40,3 +40,4 @@ private
     params.require(:userparam).permit(:user_id, :firstname, :lastname, :hometown, :occupation, :age, :avatar)
   end
 end
+

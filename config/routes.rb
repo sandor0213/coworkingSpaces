@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
-  resources :coworkingfilters
-  resources :coworkingspaces
+  resources :filters
+  resources :spaces
   resources :userparams
   resources :comments
-  resources :orderspaces
-  resources :suggestionspaces
-  get "/coworkingspaces/filtered_spaces/:id", to: "coworkingspaces#filtered_spaces", as: :filtered_spaces
+  resources :orders
+  resources :suggestions
+  resources :messages
+  get "/spaces/filtered_spaces/:id", to: "spaces#filtered_spaces", as: :filtered_spaces
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
