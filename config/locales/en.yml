@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  succeded: "Your comment was successfully created"
+  failed: "Your comment failed" 
+  notice: "Notice"
+  booking_updated: "Booking successfully updated"
+  booking_not_updated: "Booking of coworking space could not be updated"

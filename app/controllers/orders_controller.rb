@@ -44,11 +44,11 @@ $coworkingspace = nil
 
 	def update
 		 if @orderspace.update(orderspaceparams)
-		 	 flash[:notice] = "Booking successfully updated"
+		 	 flash[:notice] = t('booking_updated')
 
       redirect_to order_path(@orderspace.id)
   else
-  	flash[:error] = "Booking of coworking space could not be updated"
+  	flash[:error] = t('booking_not_updated')
   	render 'edit'
   end
 	end	
