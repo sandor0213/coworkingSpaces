@@ -3,10 +3,24 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'pry'
+
+gem 'pry-nav'
+
+# Use with command-line debugging, but not RubyMine
+#gem 'debugger'
+
+gem 'bundler'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
 gem 'rails', '~> 5.2.2'
+
+# Use sqlite3 as the database for Active Record
+
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12.1'
+gem 'rake', '12.3.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,11 +52,21 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem "paperclip", "~> 4.2"
 gem 'carrierwave', '~> 1.0'
+gem 'tinymce-rails'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'devise'
+
+
+gem 'rspec-rails', '~> 3.8'
+# gem 'shoulda-matchers' , '~> 4.0.0'
+gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+  # gem 'rails-controller-testing'
 end
 
 group :development do
@@ -50,16 +74,20 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3', '~> 1.3.6'
+
 end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
 end
 
 group :production do

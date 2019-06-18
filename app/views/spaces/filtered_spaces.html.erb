@@ -1,22 +1,38 @@
-<% if @coworkingspaces == [] %>
-  <p> Based on your parameters no coworking spaces was found. Please change your parameters for search. </p><br>
+<div class="container-fluid">
+
+	<% if @coworkingspaces == [] %>
+ <center><h2>Based on your parameters no coworking spaces was found. Please change your parameters for search</h2> </center>
 <% else %>
+<div class="space">
+		<div class="row">
+			<div class="col-6">
+				<div class="info">
   <% @coworkingspaces.each do |space| %>
-<p>City: <%= space.city %><br>
-Address: <%= space.address %><br>
-Area in m²: <%= space.area %><br>
-Description: <%= space.description %><br>
-Price per a person (per a day) in $: <%= space.price %><br>
-How many persons: <%= space.people_number %><br>
-Do you have:<br>
-Kitchen  <%= check_box_tag 'Kitchen', 'accepted', space.has_kitchen, disabled: true %><br>
-Meetroom  <%= check_box_tag 'Meetroom', 'accepted', space.has_meetroom, disabled: true %><br>
-free WiFi  <%= check_box_tag "WiFi", 'accepted', space.has_free_wifi, disabled: true %><br>
-free coffee, tea, and cookies? <%= check_box_tag "Cookies", 'accepted', space.has_free_cookies, disabled: true %><br>
-Photo: <%= image_tag(space.image_url, size: "100x100")%></p><br>
+
+			<p>City: <%= space.city %></p>
+			<p>Address: <%= space.address %></p>
+			<p>Area in m²: <%= space.area %></p>
+			<p>Description: <%= space.description %></p>
+			<p>Price per a person (per a day) in $: <%= space.price %></p>
+			<p>How many persons: <%= space.people_number %></p>
+			<p>Do you have:</p>
+				<div class="about">
+				 <%= check_box_tag 'Kitchen', 'accepted', @coworkingspace.has_kitchen, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> kitchen <br>
+				 <%= check_box_tag 'Meetroom', 'accepted', @coworkingspace.has_meetroom, disabled: true , class: "checkbox" %><span class="checkbox-fake"></span> meetroom <br>
+				  <%= check_box_tag 'wifi', 'accepted', @coworkingspace.has_free_wifi, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> free WiFi<br>
+				 <%= check_box_tag "Cookies", 'accepted', @coworkingspace.has_free_cookies, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> free coffee, tea, and cookies<br>
+				</div>
+			</div>
+			<div class="col-6">
+<%= image_tag(@coworkingspace.image_url, size: "300x300")%><br>
+			</div>
 <% if space.is_booked %>
-The coworking space is booked!
+<center>	<h2>The coworking space is booked!</h2>	</center>
 <% end %>
-<%= link_to "Read more", space_path(space.id) %><br></p>
+<%= link_to "Read more", space_path(space.id), class: "subm"%><br></p>
 <% end %>
 <% end %>
+</div>
+</div>
+</div>
+</div>

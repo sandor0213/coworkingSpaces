@@ -15,13 +15,13 @@ Bootsnap は RubyVM におけるバイトコード生成やファイルルック
 この gem は macOS と Linux で作動します。まずは、`bootsnap` を `Gemfile` に追加します:
 
 ```ruby
-gem 'bootsnap', require: false
+# gem 'bootsnap', require: false
 ```
 
 Rails を使用している場合は、以下のコードを、`config/boot.rb` 内にある `require 'bundler/setup'` の直後に追加してください。
 
 ```ruby
-require 'bootsnap/setup'
+# require 'bootsnap/setup'
 ```
 
 単に `gem 'bootsnap', require: 'bootsnap/setup'` と指定することも技術的には可能ですが、最大限のパフォーマンス改善を得るためには Bootsnap をできるだけ早く読み込むことが重要です。
@@ -31,7 +31,7 @@ require 'bootsnap/setup'
 Rails を使用していない場合、または、より多くの設定を変更したい場合は、以下のコードを `require 'bundler/setup'` の直後に追加してください(早く読み込まれるほど、より多くのものを最適化することができます）。
 
 ```ruby
-require 'bootsnap'
+# require 'bootsnap'
 env = ENV['RAILS_ENV'] || "development"
 Bootsnap.setup(
   cache_dir:            'tmp/cache',          # キャッシュファイルを保存する path

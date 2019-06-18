@@ -1,14 +1,25 @@
+<div class="container-fluid">
 <% if @coworkingspaces == [] || @coworkingspaces.nil? %>
-You have no coworking spaces yet
+<center><h2>You have no coworking spaces yet</h2></center>
 <% else %>
+
 <% @coworkingspaces.each do |space| %>
+<div class="about_cards">
 <% if current_user.id == space.user_id %>
-<p>City: <%= space.city %><br>
-Address: <%= space.address %><br>
-Area in m²: <%= space.area %><br>
-Description: <%= space.description %><br>
-Photo: <%= image_tag(space.image_url, size: "100x100")%><br>
-<%= link_to "Read more", space_path(space.id) %><br></p>
+<div class="card" style="width: 18rem;">
+  <center><img class="card-img-top"> <%= image_tag(space.image_url, size: "100x100")%> 
+  <div class="card-body">
+    <h5 class="card-title"><%= space.city %></h5>
+    
+    <a href="#" ><%= link_to "Read more", space_path(space.id), class: "subm" %></a>
+  </div>
+</center>
+</div>
+ 
+
 <% end %>
 <% end %>
+</div>
 <% end %>
+
+</div>

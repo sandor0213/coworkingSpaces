@@ -18,7 +18,7 @@ namespace(:spec) do
       #            bundle install;
       #            rake spec'
       # BASH
-      system <<-BASH
+      # system <<-BASH
         bash -c 'export PATH="$HOME/.rbenv/bin:$PATH";
                  [[ `which rbenv` ]] && eval "$(rbenv init -)";
                  [[ ! -a $HOME/.rbenv/versions/#{version} ]] && rbenv install #{version};

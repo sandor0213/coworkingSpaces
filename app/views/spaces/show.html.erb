@@ -1,53 +1,70 @@
-<p>City <%= @coworkingspace.city %><br>
-Address <%= @coworkingspace.address %><br>
-Area in m² <%= @coworkingspace.area %><br>
-Description: <%= @coworkingspace.description %><br>
-Price per a person (per a day) in $: <%= @coworkingspace.price %><br>
-How many persons: <%= @coworkingspace.people_number %><br>
-Do you have:<br>
-Kitchen  <%= check_box_tag 'Kitchen', 'accepted', @coworkingspace.has_kitchen, disabled: true %><br>
-Meetroom  <%= check_box_tag 'Meetroom', 'accepted', @coworkingspace.has_meetroom, disabled: true %><br>
-free WiFi  <%= check_box_tag 'wifi', 'accepted', @coworkingspace.has_free_wifi, disabled: true %><br>
-free coffee, tea, and cookies? <%= check_box_tag "Cookies", 'accepted', @coworkingspace.has_free_cookies, disabled: true %><br>
-Photo: <%= image_tag(@coworkingspace.image_url, size: "200x200")%><br>
-Available dates:</br> 
-<% @coworkingspace.suggestionspaces.each do |suggestion| %>
-Begin date <%= suggestion.beginDate %><br>
-Finish date <%= suggestion.finishDate %><hr>
- <% end %>
-  <% if current_user.id == @coworkingspace.user_id %>
-<%= link_to "Add available date", new_suggestion_path(coworkingspace_id: @coworkingspace.id)%><br>
-<% else %>
-<% if !@coworkingspace.user.userparam.nil? %>
-</p>Information about owner of the coworking space<br>
-Firsname: <%= @coworkingspace.user.userparam.firstname %><br>
-Lastname: <%= @coworkingspace.user.userparam.lastname %><br>
-Age: <%= @coworkingspace.user.userparam.age %><br>
-Hometown: <%= @coworkingspace.user.userparam.hometown %><br>
-Occupation: <%= @coworkingspace.user.userparam.occupation %><br>
-<%= image_tag @coworkingspace.user.userparam.avatar.url(:thumb) %>
-<% end %>
-<p><%= link_to "Order", new_order_path(coworkingspace_id: @coworkingspace.id)%>
-<p><%= link_to "Write message", new_message_path(user_id: @coworkingspace.user_id)%></p>
- </p><%= link_to "Add comment", new_comment_path(coworkingspace_id: @coworkingspace.id) %><br>
-<%= pluralize(@coworkingspace.comments.count, "comment") %> </br>
- <% if !@coworkingspace.comments.nil? || @coworkingspace.comments != [] %>
- <% @coworkingspace.comments.order(created_datetime: :desc).each do |comment| %>
- <% if !comment.user.userparam.nil? %>
- <%= image_tag comment.user.userparam.avatar.url(:thumb) %>
-  <%= comment.user.userparam.firstname %>
- <%= comment.user.userparam.lastname %>
- <% else %>
-<%= comment.user.email%>
- <% end %>
- <%= comment.created_at.strftime("%Y-%m-%d %H:%M")%> commented: <br>
- <%= comment.message %>
-  <% if current_user.id == comment.user.id %>
- <%= link_to "Delete comment", comment_path(comment.id, coworkingspace_id: @coworkingspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space"} %>
-  <% end %><br>
- <% if !comment.image_url.nil? %>
- <%= image_tag(comment.image_url, size: "200x200") %>
- <% end %><p>
- <% end %>
- <% end %>
- <% end %>
+<div class="container-fluid">
+	<div class="space">
+		<div class="row">
+			<div class="col-6">
+				<div class="info">
+				<p>City: <%= @coworkingspace.city %><br></p>
+				<p>Address: <%= @coworkingspace.address %><br></p>
+				<p>Area in m²: <%= @coworkingspace.area %><br></p>
+				
+				<p>Price per a person (per a day) in $: <%= @coworkingspace.price %><br></p>
+				<p>How many persons: <%= @coworkingspace.people_number %><br></p>
+					<p>Do you have:<br></p>
+					<div class="about">
+				 <%= check_box_tag 'Kitchen', 'accepted', @coworkingspace.has_kitchen, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> kitchen <br>
+				 <%= check_box_tag 'Meetroom', 'accepted', @coworkingspace.has_meetroom, disabled: true , class: "checkbox" %><span class="checkbox-fake"></span> meetroom <br>
+				  <%= check_box_tag 'wifi', 'accepted', @coworkingspace.has_free_wifi, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> free WiFi<br>
+				 <%= check_box_tag "Cookies", 'accepted', @coworkingspace.has_free_cookies, disabled: true, class: "checkbox" %><span class="checkbox-fake"></span> free coffee, tea, and cookies<br>
+				</div>
+				</div>
+			</div>
+
+			<div class="col-6">
+  	               <%= image_tag(@coworkingspace.image_url, size: "300x300")%><br>
+				<h5>Available dates:</h5></br> 
+				<% @coworkingspace.suggestionspaces.each do |suggestion| %>
+				<p>Begin date: <%= suggestion.beginDate %></p>
+				<p>Finish date: <%= suggestion.finishDate %></p>
+ 			<% end %>
+  				<% if current_user.id == @coworkingspace.user_id %>
+			<%= link_to "Add available date", new_suggestion_path(coworkingspace_id: @coworkingspace.id), class: "subm" %><br>				
+			
+				<% else %>
+			<% if !@coworkingspace.user.userparam.nil? %>
+				<%= image_tag @coworkingspace.user.userparam.avatar.url, size: "300x300" %>
+				<h5>Information about owner of the coworking space</h5><br>
+				<p>Firsname: <%= @coworkingspace.user.userparam.firstname %></p><br>
+				<p>Lastname: <%= @coworkingspace.user.userparam.lastname %></p><br>
+				<p>Age: <%= @coworkingspace.user.userparam.age %></p><br>
+				<p>Hometown: <%= @coworkingspace.user.userparam.hometown %></p><br>
+				<p>Occupation: <%= @coworkingspace.user.userparam.occupation %></p><br>
+				<% end %>
+				</div>
+
+	<%= link_to "Order", new_order_path(coworkingspace_id: @coworkingspace.id), class: "subm"%><%= link_to "Add comment", new_comment_path(coworkingspace_id: @coworkingspace.id), class: "subm" %><br>
+ 		<%= link_to "Write message", new_message_path(user_id: @coworkingspace.user_id), class: "subm"%>
+				<%= pluralize(@coworkingspace.comments.count, "comment") %> </br>
+ 				<% if !@coworkingspace.comments.nil? || @coworkingspace.comments != [] %>
+ 				<% @coworkingspace.comments.order(created_datetime: :desc).each do |comment| %>
+ 				<% if !comment.user.userparam.nil? %>
+ 				<%= image_tag comment.user.userparam.avatar.url(:thumb) %>
+  				<%= comment.user.userparam.firstname %>
+ 				<%= comment.user.userparam.lastname %>
+ 					<% else %>
+				Unknown User
+ 					<% end %>
+ 				<%= comment.created_datetime.strftime("%Y-%m-%d %H:%M") %><br>
+ 				<%= comment.message %>
+  			<% if current_user.id == comment.user.id %>
+ 			<%= link_to "Delete comment", comment_path(comment.id, coworkingspace_id: @coworkingspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space"} %>
+  				<% end %><br>
+ 				<% if !comment.image_url.nil? %>
+ 				<%= image_tag(comment.image_url, size: "200x200") %>
+ 				<% end %>
+ 			<% end %>
+ 		<% end %>
+ 	<% end %>
+       </div>
+       <p>Description: <%= @coworkingspace.description %><br></p>	
+ 	</div>
+ </div>
