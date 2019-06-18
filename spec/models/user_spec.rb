@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
   end
 
    describe "associations" do
-    it { should have_one(:userparam).dependent(:destroy) }
+    it { should have_one(:userparam) }
   end
 
   describe "associations1" do
