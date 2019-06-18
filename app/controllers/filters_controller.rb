@@ -1,7 +1,10 @@
 class FiltersController < ApplicationController
 	def new
-	@coworkingfilter = Coworkingfilter.new
-end	
+		@coworkingfilter = Coworkingfilter.new
+		respond_to do |format|
+	       format.js
+	    end
+	end	
 
 def create
 	@coworkingfilter = Coworkingfilter.new(coworkingfilterparams)

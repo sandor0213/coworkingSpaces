@@ -1,3 +1,5 @@
+<div class="container-fluid">
+	<div class="space">
 <% if @comment.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@comment.errors.count, "error") %> </h2>
@@ -10,7 +12,11 @@
    </div>
  <% end %>
 <%= form_for @comment, url: comments_path(coworkingspace_id: @coworkingspace.id) do |f|%>
-Your message <%= f.text_field :message %><br>
+<div class="field">
+Your message: <%= f.text_field :message %><br>
+</div>
 Photo: <%= f.file_field :image %><br>
-<%= f.submit "Create" %>
+<%= f.submit "Create", class: "subm" %>
 <% end %>
+</div>
+</div>

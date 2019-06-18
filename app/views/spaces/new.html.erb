@@ -1,4 +1,82 @@
-<% if @coworkingspace.errors.any? %>
+<div class="container-fluid">
+
+ <div class="row">
+			<div class="col-2"></div>	
+			<div class="col-8">
+				<div class="border-form1">
+			<%= form_for @coworkingspace, url: spaces_path do |f| %>
+				<h2>Location </h2>
+				<center>
+ 			<div class="field">
+ 				 <%= f.label :city %><br />
+				 <%= f.text_field :city %>
+			</div>
+
+			<div class="field">
+				<%= f.label :address %><br />
+			    <%= f.text_field :address %><br>
+			</div>
+
+            <div class="field">
+            	<%= f.label :area_in_m² %><br />
+					 <%= f.text_field :area %><br>
+			</div>
+             <div class="field">
+             	<%= f.label :description %><br />
+			  <%= f.text_area :description, class:"field_for_decs" %><br>
+			</div>
+             <div class="field">
+
+					<p>Price per a person (per a day) in $:</p>
+					 <%= f.text_field :price %><br>
+			</div>
+            <div class="field">
+            	<%= f.label :how_many_persons %><br />
+					 <%= f.number_field :people_number, value:1, min: 1, class: "number_field" %><br>
+			</div>
+
+             <p>Do you have:</p>
+</center>
+<div class="choise">
+     <div class="field2">       
+      <label class="form-label">
+        <%= f.check_box :has_kitchen, class: "checkbox", type: "checkbox" %>
+        <span class="checkbox-fake"></span>
+        <%= f.label :kitchen %>
+      </label>
+    </div> 
+
+     <div class="field2">       
+      <label class="form-label">
+        <%= f.check_box :has_meetroom, class: "checkbox", type: "checkbox" %>
+        <span class="checkbox-fake"></span>
+        <%= f.label :meetroom %>
+      </label>
+    </div> 
+    
+     <div class="field2">       
+      <label class="form-label">
+        <%= f.check_box :has_free_wifi, class: "checkbox", type: "checkbox" %>
+        <span class="checkbox-fake"></span>
+        <%= f.label :free_wifi %>
+      </label>
+    </div> 
+
+    <div class="field2">       
+      <label class="form-label">
+        <%= f.check_box :has_free_cookies, class: "checkbox", type: "checkbox" %>
+        <span class="checkbox-fake"></span>
+        <%= f.label :free_cookies %>
+      </label>
+    </div> 
+</div>
+		<center>
+			<div class="image">
+    	<%= f.file_field :image%> <br />
+ 	 </div>
+		<br />
+			<center>
+	<% if @coworkingspace.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@coworkingspace.errors.count, "error") %> </h2>
   
@@ -9,19 +87,19 @@
      </ul>
    </div>
  <% end %>
-<%= form_for @coworkingspace, url: spaces_path do |f| %>
-<p>Location </p><br>
-City <%= f.text_field :city %><br>
-Address <%= f.text_field :address %><br>
-Area in m² <%= f.text_field :area %><br>
-Description: <%= f.text_area :description, size: "60x12"  %><br>
-Price per a person (per a day) in $: <%= f.text_field :price %><br>
-How many persons: <%= f.number_field :people_number, value:1, min: 1 %><br>
-Do you have:<br>
-Kitchen  <%= f.check_box :has_kitchen %><br>
-Meetroom  <%= f.check_box :has_meetroom %><br>
-free WiFi  <%= f.check_box :has_free_wifi %><br>
-free coffee, tea, and cookies? <%= f.check_box :has_free_cookies %><br>
-Photo: <%= f.file_field :image %><br>
-<%= f.submit "Create" %>
-<% end %>
+</center>
+
+			<div class="action">
+					<%= f.submit "Create", class: "subm" %>
+			</div>
+			</center>
+			
+		<% end %>
+              
+           </div>
+           </div>
+           <div class="col-2"></div>
+	
+			</div>
+
+ </div>

@@ -16,7 +16,7 @@
 
 
 
-VPATH = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
+VPATH = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -318,24 +318,24 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing aclocal-1.15
+ACLOCAL = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing aclocal-1.15
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LTLDFLAGS = 
 AM_RUNTESTFLAGS = 
 AR = ar
-AUTOCONF = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing autoconf
-AUTOHEADER = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing autoheader
-AUTOMAKE = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing automake-1.15
+AUTOCONF = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing autoconf
+AUTOHEADER = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing autoheader
+AUTOMAKE = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing automake-1.15
 AWK = awk
-CC = clang
-CCAS = clang
+CC = gcc
+CCAS = gcc
 CCASDEPMODE = depmode=none
 CCASFLAGS = 
 CCDEPMODE = depmode=none
 CFLAGS =  -Wall -fexceptions
-CPP = clang -E
+CPP = gcc -E
 CPPFLAGS = 
 CXX = g++
 CXXCPP = g++ -E
@@ -372,7 +372,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing makeinfo
+MAKEINFO = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/local/bin/gmkdir -p
 NM = /usr/bin/nm -B
@@ -401,12 +401,12 @@ TARGET = X86_64
 TARGETDIR = x86
 TARGET_OBJ =  src/x86/ffi64.lo src/x86/unix64.lo src/x86/ffiw64.lo src/x86/win64.lo
 VERSION = 3.99999
-abs_builddir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-darwin17
-abs_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
-abs_top_builddir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-darwin17
-abs_top_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
+abs_builddir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-darwin17
+abs_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
+abs_top_builddir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-darwin17
+abs_top_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
 ac_ct_AR = ar
-ac_ct_CC = clang
+ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
 am__include = include
@@ -435,7 +435,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/install-sh
+install_sh = ${SHELL} /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -450,7 +450,7 @@ psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
-srcdir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
+srcdir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
 sys_symbol_underscore = yes
 sysconfdir = ${prefix}/etc
 target = x86_64-apple-darwin18.0.0
@@ -462,7 +462,7 @@ toolexecdir = ${exec_prefix}/lib/gcc-lib/$(target_alias)
 toolexeclibdir = ${exec_prefix}/lib
 top_build_prefix = 
 top_builddir = .
-top_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
+top_srcdir = /Users/alexanderbalogh/project/CoworkingSpaces1/CoworkingSpaces/vendor/cache/gems/ffi-1.10.0/ext/ffi_c/libffi
 AUTOMAKE_OPTIONS = foreign subdir-objects
 ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = include testsuite man $(am__append_1)

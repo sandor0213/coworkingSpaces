@@ -1,4 +1,5 @@
-<% if @orderspace.errors.any? %>
+<div class="container-fluid">
+ <% if @orderspace.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@orderspace.errors.count, "error") %> </h2>
   
@@ -9,10 +10,18 @@
      </ul>
    </div>
  <% end %>
-<%= form_for @orderspace, url: orders_path do |f| %>
+ <div class="row">
+ 	<div class="col-4"></div>
+ 	<div class="col-4">
+ 		<div class="space">
+ <%= form_for @orderspace, url: order_path(@orderspace.id) do |f| %>
 How many persons: <%= f.number_field :peopleNumber, value:1, min: 1 %><br>
 <%= f.date_select :beginDate, start_year: Date.current.year, end_year: Date.current.year %> <br>
 <%= f.date_select :finishDate, start_year: Date.current.year, end_year: Date.current.year %> <br>
-<%= f.submit "Book a coworking space" %>
+<%= f.submit "Book a coworking space", class: "subm" %>
 <% end %>
-
+</div>
+</div>
+<div class="col-4"></div>
+</div>
+</div>
