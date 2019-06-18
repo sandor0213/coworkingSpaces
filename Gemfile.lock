@@ -133,6 +133,7 @@ GEM
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
+    pg (1.1.4)
     popper_js (1.14.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -165,6 +166,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.2.3)
       actionpack (= 5.2.3)
       activesupport (= 5.2.3)
@@ -272,11 +278,13 @@ DEPENDENCIES
   paperclip (~> 4.2)
   pry
   pry-nav
+  pg
   puma (~> 3.12.1)
   rails (~> 5.2.3)
   rails-controller-testing
   rake (= 12.3.2)
   rspec-rails (~> 3.8)
+
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers (= 4.0.0.rc1)
@@ -288,7 +296,9 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.3.7p296
+
+   ruby 2.4.4p456
+
 
 BUNDLED WITH
-   2.0.2
+   1.17.3
