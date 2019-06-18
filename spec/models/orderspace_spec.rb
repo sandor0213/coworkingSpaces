@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Orderspace, type: :model do
-  let!(:user){create(:user)}
+  # let!(:user){create(:user)}
+   let!(:user) { create(:user, email: "sandorff@gmail.com", password: "Password456") }
   let!(:coworkingspace){create(:coworkingspace)}
 
  subject{

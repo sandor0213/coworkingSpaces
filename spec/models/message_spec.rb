@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Message, type: :model do
-   let!(:user){create(:user)}
+   # let!(:user){create(:user)}
+   let!(:user) { create(:user, email: "sandorff@gmail.com", password: "Password456") }
 
   subject{
-     build(:message, body:"body", from_user_id: user.id, user_id: user.id)
+     build(:message, body:"body", from_user_id: user.id, to_user_id: user.id, user_id: user.id)
   }
 
   context "validation" do
