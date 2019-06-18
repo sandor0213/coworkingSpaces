@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject{
-  	build(:user)
+  	build(:user, email: "sandorff@gmail.com", password: "Password456")
   }
 
   describe "validation" do
