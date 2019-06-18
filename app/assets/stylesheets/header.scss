@@ -24,11 +24,20 @@
 .fas{
 	/*font-family: 'Cabin', sans-serif;*/
 	color:#2e435e;
+	font-size: 20px;
 }
 
+li{
+	list-style-type: none;
+	
+}
+.nav-lang{
+	color:#ffffff;
+}
 
-
-
+.nav-lang:hover{
+	color:#2e435e;
+}
 /* User sign in and sign forms. */
 .border-form-div {
 	font-family: 'Merriweather', serif;
@@ -85,7 +94,7 @@
 .subm{
 	border: 1px solid #fd9800;
 	background-color: #fd9800;
-	border-radius: 11px;
+	border-radius: 8px;
 	outline:0px !important;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -173,7 +182,7 @@ li.nav-item.dropdown{
 .dropdown-menu{
 	width: 200px;
 	position: static;
-	margin-left: -160px;
+	margin-left: -105px;
 	margin-top: -5px;
 	 background-color: #fff9e5;
   border: 1px solid #fd9800;

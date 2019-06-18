@@ -50,6 +50,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem "paperclip", "~> 4.2"
 gem 'carrierwave', '~> 1.0'
+gem 'tinymce-rails'
 
 
 group :development, :test do

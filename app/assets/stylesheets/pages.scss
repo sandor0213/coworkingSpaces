@@ -1,3 +1,76 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-inner{
+	margin-top: 10px;
+}
+
+.img-fluid{
+	margin-left: 110px;
+	width: auto;
+}
+
+
+.reveal {
+  width: 380px;
+  height: 660px;
+  margin: 50px;
+  float: left;
+}
+
+.open {
+  background: url(http://uploadir.com/u/9btuxs9t) 0px 330px, url(http://uploadir.com/u/9btuxs9t) 0px -405px, #42413C;
+  background-repeat: no-repeat;
+  -webkit-transition: background-position 0.3s ease;
+  -moz-transition: background-position 0.3s ease;
+  -o-transition: background-position 0.3s ease;
+  -ms-transition: background-position 0.3s ease;
+  transition: background-position 0.3s ease;
+}
+
+.opened {
+  background: url(http://uploadir.com/u/9btuxs9t) 0px 660px, url(http://uploadir.com/u/9btuxs9t) 0px -735px, #42413C;
+  background-repeat: no-repeat;
+}
+
+.reveal p {
+  font: 45px/300px Helvetica, Arial, sans-serif;
+  text-align: center;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.revealed p {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.content:hover{
+  color: #FFFFFF;  
+}
+
+.content{
+  font-size: 18px;
+  margin-top: 5px;  
+}
+
+.content-left{
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+.menu{
+  height: 35px;
+
+}
