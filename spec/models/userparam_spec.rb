@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Userparam, type: :model do
-	let!(:user){create(:user)}
+	# let!(:user){create(:user)}
+	 let!(:user) { create(:user, email: "sandorff@gmail.com", password: "Password456") }
  
   subject{
      build(:userparam, firstname: "Sandor", lastname: "Baloh", age: 24, hometown: "hometown", occupation: "occupation", user_id: user.id)
