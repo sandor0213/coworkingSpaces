@@ -8,7 +8,7 @@ Address: <%= space.address %><br>
 Area in m²: <%= space.area %><br>
 Description: <%= space.description %><br>
 Photo: <%= image_tag(space.image_url, size: "100x100")%><br>
-<%= link_to "Read more", coworkingspace_path(space.id) %><br></p>
+<%= link_to "Read more", space_path(space.id) %><br></p>
 <% end %>
 <% end %>
 <% end %>

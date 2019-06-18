@@ -27,9 +27,13 @@ Hometown: <%= @coworkingspace.user.userparam.hometown %><br>
 Occupation: <%= @coworkingspace.user.userparam.occupation %><br>
 <%= image_tag @coworkingspace.user.userparam.avatar.url(:thumb) %>
 <% end %>
+<% if !@coworkingspace.is_booked %>
 <p><%= link_to "Order", new_order_path(coworkingspace_id: @coworkingspace.id)%>
+<% else %>
+The coworking space is booked!
+<% end %>
+<p><%= link_to "Write message", new_message_path(user_id: @coworkingspace.user_id)%></p>
  </p><%= link_to "Add comment", new_comment_path(coworkingspace_id: @coworkingspace.id) %><br>
- <p><%= link_to "Write message", new_message_path(user_id: @coworkingspace.user_id)%>
 <%= pluralize(@coworkingspace.comments.count, "comment") %> </br>
  <% if !@coworkingspace.comments.nil? || @coworkingspace.comments != [] %>
  <% @coworkingspace.comments.order(created_datetime: :desc).each do |comment| %>
@@ -38,9 +42,9 @@ Occupation: <%= @coworkingspace.user.userparam.occupation %><br>
   <%= comment.user.userparam.firstname %>
  <%= comment.user.userparam.lastname %>
  <% else %>
-Unknown User
+<%= comment.user.email%>
  <% end %>
- <%= comment.created_datetime.strftime("%Y-%m-%d %H:%M") %><br>
+ <%= comment.created_at.strftime("%Y-%m-%d %H:%M")%> commented: <br>
  <%= comment.message %>
   <% if current_user.id == comment.user.id %>
  <%= link_to "Delete comment", comment_path(comment.id, coworkingspace_id: @coworkingspace.id), method: :delete, data: {confirm: "Are you sure you want to delete booking of the coworking space"} %>

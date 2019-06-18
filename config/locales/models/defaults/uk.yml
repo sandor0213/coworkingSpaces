@@ -1,0 +1,48 @@
+uk:
+   activerecord:
+     models:
+       comment:
+       coworkingfilter:
+       coworkingspace:
+       message:
+       orderspace:
+       suggestionspace:
+       userparam: 
+     attributes:
+       comment:
+         message: "Повідомлення"
+         image: "Світлина"
+       coworkingfilter:
+         city: "Місто"
+         beginDate: "Початкова дата"
+         finishDate: "Кінцева дата"
+         coworkingspace: "Простір співпраці"
+         price: "Ціна"
+         area: "Площа"
+         description: "Опис"
+         is_booked: "Заброньовано"
+         address: "Адреса"
+         city: "Місто"
+         beginDate: "Початкова дата"
+         finishDate: "Кінцева дата"
+         has_kitchen: "Наявність кухні"
+         has_meetroom: "Наявність кімнати переговорів"
+         has_free_wifi: "Наявність безкоштовного вай фай"
+         has_free_cookies: "Наявність печеньок"
+         people_number: "Кількість людей"
+         image: "Світлина"
+       message:
+        body: "Тіло"
+       orderspace:
+        people_number: "Кількість людей"
+        beginDate: "Початкова дата"
+        finishDate: "Кінцева дата"
+       suggestionspace:
+        beginDate: "Початкова дата"
+        finishDate: "Кінцева дата"
+       userparam: 
+        firstname: "Ім'я"
+        lastname: "Прізвище"
+        hometown: "Рідне місто"
+        occupation: "Рід заняття"
+        age: "Вік"
