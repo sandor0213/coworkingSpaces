@@ -20,7 +20,7 @@
    </div>
  <% end %>
 
-   <%= form_for @coworkingfilter, url: coworkingfilters_path do |f| %>
+   <%= form_for @coworkingfilter, url: filters_path do |f| %>
 
      <p><%= f.select(:city, Coworkingspace.all.map{|u| ["#{u.city}", u.city]}.uniq, :prompt => 'Select a city') %><br />
   <%= f.date_select :beginDate, start_year: Date.current.year, end_year: Date.current.year + 5 %> <br />
