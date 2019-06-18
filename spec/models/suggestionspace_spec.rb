@@ -10,3 +10,4 @@ RSpec.describe Suggestionspace, type: :model do
     context "association" do
     it { should belong_to(:suggestionspace) }
   end
+end
