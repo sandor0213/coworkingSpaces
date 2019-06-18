@@ -228,6 +228,10 @@ GEM
       rubyzip (~> 1.2, >= 1.2.2)
     shoulda-matchers (4.0.0.rc1)
       activesupport (>= 4.2.0)
+    spring (2.1.0)
+    spring-watcher-listen (2.0.1)
+      listen (>= 2.7, < 4.0)
+      spring (>= 1.2, < 3.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -276,18 +280,20 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   paperclip (~> 4.2)
+  pg
   pry
   pry-nav
-  pg
   puma (~> 3.12.1)
-  rails (~> 5.2.3)
+  rails (~> 5.2.2)
   rails-controller-testing
+  rails_12factor
   rake (= 12.3.2)
   rspec-rails (~> 3.8)
-
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers (= 4.0.0.rc1)
+  spring
+  spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.3.6)
   tinymce-rails
   turbolinks (~> 5)
@@ -296,9 +302,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-
    ruby 2.4.4p456
-
 
 BUNDLED WITH
    1.17.3
