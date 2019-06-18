@@ -23,7 +23,7 @@
          <% else %>
              <%= link_to t('profile'), userparam_path(current_user.id) %> <hr>
          <% end %>
-        <a class="dropdown-item"><%= link_to "Find coworking space", new_filter_path, remote: true, data: { toggle: 'modal', 'target': '#create'} %></a><hr>
+        <a class="dropdown-item"><%= link_to "Find coworking space", new_filter_path %></a><hr>
         <a class="dropdown-item" ><%= link_to "Suggest coworking space", new_space_path %></a><hr>
         <a class="dropdown-item" ><%= link_to "My Orders", orders_path %></a><hr>
         <a class="dropdown-item" ><%= link_to "My Coworking Spaces", spaces_path %></a><hr>

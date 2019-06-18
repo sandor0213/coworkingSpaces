@@ -27,7 +27,11 @@ Hometown: <%= @coworkingspace.user.userparam.hometown %><br>
 Occupation: <%= @coworkingspace.user.userparam.occupation %><br>
 <%= image_tag @coworkingspace.user.userparam.avatar.url(:thumb) %>
 <% end %>
+<% if !@coworkingspace.is_booked %>
 <p><%= link_to "Order", new_order_path(coworkingspace_id: @coworkingspace.id)%>
+<% else %>
+The coworking space is booked!
+<% end %>
 <p><%= link_to "Write message", new_message_path(user_id: @coworkingspace.user_id)%></p>
  </p><%= link_to "Add comment", new_comment_path(coworkingspace_id: @coworkingspace.id) %><br>
 <%= pluralize(@coworkingspace.comments.count, "comment") %> </br>
