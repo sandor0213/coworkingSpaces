@@ -4,13 +4,15 @@
     <title>CoworkingSpaces</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true  %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="/assets/javascript/dropzone.js"></script>
+  <script src="/examples/vendors/jquery/jquery-3.3.1.min.js"></script>
   </head>
 
 
@@ -23,7 +25,7 @@
   <% end %>
       <%= yield %>
       <div id ="create"></div>
-      <%= render 'layouts/footer' %>
+     
     
   </body>
 

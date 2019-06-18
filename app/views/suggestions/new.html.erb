@@ -1,8 +1,9 @@
 <div class="container-fluid">
 	<div class="row">
-	<div class="col-4"></div>
-	<div class="col-4">
-		<div class="found">
+		<div class="col-4"></div>
+		<div class="col-4">
+			<div class="space">
+				<center>
 <% if @suggestionspace.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@suggestionspace.errors.count, "error") %> </h2>
@@ -19,6 +20,7 @@
 <%= f.date_select :finishDate, start_year: Date.current.year, end_year: Date.current.year + 5 %> <br></p>
 <%= f.submit "Create date", class: "subm" %>
 <% end %>
+</center>
 </div>
 </div>
 <div class="col-4"></div>
