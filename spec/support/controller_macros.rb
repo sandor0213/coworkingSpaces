@@ -9,12 +9,11 @@ module ControllerMacros
   def login_user
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:user]
-      user = FactoryBot.create(:user)
+      user = FactoryBot.create(:user, email: "test@gmail.com", password: "Password456")
       sign_in user
     end
   end
 end
-
 
 
 # module ControllerMacros
